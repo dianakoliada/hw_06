@@ -9,7 +9,62 @@
 </head>
 
 <body>
+   <script>
+      //1.
+      let num = 15; // number of elem
+      const numArray = [];
+      numArray.length = num;
 
+      for (let i = 0; i < num; i++) {
+         numArray[i] = Math.floor(Math.random() * 20);
+      };
+      console.log(numArray);
+
+      //2.
+      const result = numArray.filter((arr) => {
+         if (arr % 3 === 0) {
+            return arr;
+         }
+      });
+      console.log(`делятся на 3: ${result}`);
+
+      //3.
+      const resultTwo = numArray.find((arr) => {
+         if (arr > 7) {
+            return arr;
+         }
+         if (!arr > 7) {
+            console.log('all elements are less than 7');
+         }
+      });
+      console.log(`Первый элемент, который больше 7: ${resultTwo}`);
+
+      //4.
+      const modifiedResult = numArray.map((val) => {
+         return val * 2;
+      });
+      console.log(`Массив, где каждый элемент * 2: ${modifiedResult}`);
+
+      //4. Сложить все четные элементы массива
+
+
+      //5.
+      console.log(`Before slice 1st elem: ${numArray}`);
+      console.log(`After slice 1st elem: ${numArray.slice(1)}`);
+      console.log(`After slice last elem: ${numArray.slice(1, 14)}`);
+
+      /*ДАНО:
+Определить какие элементы массива arrayTwo есть в arrayOne.
+вывести массив с этими элеентами*/
+      const arrayOne = ['dog', 'cat', 'bird', 'rabbit', 'horse'];
+      const arrayTwo = ['apple', 'car', 'cat', 'ball', 'horse'];
+      const arrayNew = []; //insert array with spliace and flat
+
+
+
+
+
+   </script>
 </body>
 
 </html>
