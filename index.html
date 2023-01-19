@@ -11,14 +11,15 @@
 <body>
    <script>
       //1.
-      let num = 15; // number of elem
-      const numArray = [];
-      numArray.length = num;
-
-      for (let i = 0; i < num; i++) {
-         numArray[i] = Math.floor(Math.random() * 20);
-      };
+      const numArray = [...Array(15)].map(el => Math.floor(Math.random() * 20));
       console.log(numArray);
+      // let num = 15; // number of elem
+      // numArray.length = num;
+      // for (let i = 0; i < num; i++) {
+      //    numArray[i] = Math.floor(Math.random() * 20);
+      // };
+      // console.log(numArray);
+
 
       //2.
       const result = numArray.filter((arr) => {
